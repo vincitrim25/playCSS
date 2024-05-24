@@ -1,0 +1,86 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: #585368;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.first-circle{
+    box-sizing: border-box;
+    height: 70%;
+    aspect-ratio: 1;
+    border: solid 40px #CDE4DD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.second-circle{
+    box-sizing: border-box;
+    aspect-ratio: 1;
+    flex-grow: 1;
+    border: solid 40px #CDE4DD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    position: relative;
+}
+.third-circle{
+    box-sizing: border-box;
+    aspect-ratio: 1;
+    flex-grow: 1;
+    margin: 20px;
+    border: solid 40px #CDE4DD;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.line{
+    width: 40px;
+    height: 50%;
+    position: absolute;
+    background-color: #CDE4DD;
+    align-self: flex-start;
+    border-radius: 20px;
+    transform-origin: 50% 100%;
+    border: 5px solid #585368;
+    border-bottom: 0px;
+}
+.first-circle .line{
+    animation: seconds 1s infinite linear;
+}
+.second-circle .line{
+    /* transform: rotate(-90deg); */
+    animation: seconds 60s infinite linear;
+}
+.third-circle .line{
+    /* transform: rotate(135deg); */
+    animation: seconds 720s infinite linear;
+}
+
+@keyframes seconds {
+    to{
+        transform: rotate(360deg);
+    }
+}
+@keyframes minutes {
+    to{
+        transform: rotate(270deg);
+    }
+}
+@keyframes hours {
+    to{
+        transform: rotate(495deg);
+    }
+}

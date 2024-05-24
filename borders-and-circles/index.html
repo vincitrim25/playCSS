@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body { 
+           background: #826aed; 
+           display: flex;
+           justify-content: center;
+           margin: 3rem;
+           padding: 0;
+           height: 50vh;
+        }
+        .container{
+           height: 100%;
+           aspect-ratio: 1;
+           position: relative;
+        }
+        .column{
+           display:flex;
+           flex-direction: column;
+        }
+        .ball{
+           width: 3rem;
+           aspect-ratio:1;
+           background: #ffb7ff;
+           border-radius: 50%;
+        }
+        .square1{
+           border: 3rem solid #ffb7ff;
+           border-bottom: 0;
+           width:38%;
+           aspect-ratio:1;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .square2{
+           border: 3rem solid #ffb7ff;
+           border-top: 0;
+           border-right:4rem solid #ffb7ff;
+           width:calc(38% + 3rem);
+           height:6rem;
+           box-sizing:border-box;
+        }
+        .horizontal{
+           background: #ffb7ff;
+           position: absolute;
+           top:calc(3rem + 38%);
+           right: 0;
+           height:3rem;
+           width:52%;
+        }
+        .right{
+           position: absolute;
+           top: 0;
+           right: 0;
+           justify-content: center;
+           height: 100%;
+           gap: 0.8rem
+        }
+        .vertical{
+           width: 3rem;
+           background: #ffb7ff;
+           height: 50%;
+        }
+        </style>
+        <div class="container">
+           <div class="column">
+              <div class="square1">
+                 <div class="ball"></div>
+              </div>
+              <div class="square2"></div>
+           </div>
+           <div class="horizontal"></div>
+           <div class="column right">
+              <div class="ball"></div>
+              <div class="vertical"></div>
+              <div class="ball"></div>
+           </div>
+        </div>
+</body>
+</html>

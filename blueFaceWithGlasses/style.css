@@ -1,0 +1,119 @@
+html{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body { 
+    background: #afc1d6; 
+    position: relative;
+    margin: 0;
+    overflow: hidden;
+    height: 420px;
+    aspect-ratio: 1;
+ }
+ .stick{
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    background: #655a7c;
+    top: 38%;
+ }
+ .stick.left{
+    left: -15px;
+    transform: rotate(-30deg);
+    animation: glasses-left 0.7s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+ }
+ .stick.right{
+    right: -15px;
+    transform: rotate(30deg);
+    animation: glasses-right 0.7s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+ }
+ .stick.center{
+    top: 28%;
+    left: 35%;
+    animation: glasses 0.7s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+ }
+ .circle{
+    position: absolute;
+    background: radial-gradient(at top left, #afc1d6 0%, #655a7c 50%);
+    width: 140px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    top: 18%;
+    animation: glasses 0.7s infinite ease-in-out;
+    animation-direction: alternate-reverse;
+ }
+ .circle.left{
+    left: 35px;
+ }
+ .circle.right{
+    right: 45px;
+ }
+ .circle .sun{
+    width: 50px;
+    height: 15px;
+    position: absolute;
+    background:#afc1d6;
+    top: 30%;
+    transform: rotate(-45deg);
+ }
+ .sun.first{
+    left:15%;
+ }
+ .sun.second{
+    left:35%;
+ }
+ .smile{
+    position: absolute;
+    border: 15px solid #655a7c;
+    border-top: 0;
+    width: 120px;
+    /* aspect-ratio: 2; */
+    border-radius: 0 0 200px 200px;
+    /* bottom: 18%; */
+    left: 50%;
+    margin-left:-60px;
+    box-sizing: border-box;
+    animation: smile 0.7s infinite ease-in-out;
+    animation-direction: alternate;
+    background: #655a7c;
+ }
+
+ @keyframes smile{
+    0%{
+        height: 30px;
+        bottom: 30%;
+    }
+    100%{
+        height: 60px;
+        bottom: 20%;
+    }
+ }
+ @keyframes glasses{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(15px);
+    }
+ }
+ @keyframes glasses-left{
+    0%{
+        transform: translateY(0%) rotate(-30deg);
+    }
+    100%{
+        transform: translateY(20px) rotate(-30deg);
+    }
+ }
+ @keyframes glasses-right{
+    0%{
+        transform: translateY(0%) rotate(30deg);
+    }
+    100%{
+        transform: translateY(20px) rotate(30deg);
+    }
+ }

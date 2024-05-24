@@ -1,0 +1,67 @@
+html, body{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container { 
+    background: #a833b9; 
+    margin: 0; 
+    position:relative; 
+    width:400px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+ }
+ .base1{
+    box-sizing: border-box;
+    width: 100%;
+    border: 70px solid transparent;
+    border-bottom: 45px solid #f0b7b3 !important;
+    border-top: 0px;
+ }
+ .base2{
+    box-sizing: border-box;
+    width: 55%;
+    border: 40px solid transparent;
+    border-bottom: 30px solid #f0b7b3 !important;
+    border-top:0px;
+ }
+ .plant{
+    width:100%;
+    height: 325px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+ }
+ .stem{
+    width: 20px;
+    height: 100%;
+    background: #f0b7b3;
+    flex: 1 1 auto;
+ }
+ .leaf{
+    width: 70px;
+    height: 50px;
+    background: #f0b7b3;
+    border-radius: 25px;
+    transform: rotate(20deg);
+    align-self: flex-end;
+    box-sizing: border-box;
+ }
+ .leaf.right{
+    transform: rotate(160deg);
+    align-self: flex-start;
+ }
+ .ball{
+    height: 100%;
+    aspect-ratio: 1;
+    background: #a833b9;
+    border-radius: 50%;
+    transform: translateX(-15px);
+ }
